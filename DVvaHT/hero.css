@@ -1,0 +1,145 @@
+/* ============================ */
+/* === HERO SECTION - SMALL === */
+/* File: hero-section.css      */
+/* ============================ */
+
+/* === Biến màu chủ đạo sử dụng chung (Theme Variables) === */
+:root {
+    --primary-gold: #d4af37;     /* Màu vàng chủ đạo */
+    --dark-gold: #c09f2d;        /* Màu vàng tối khi hover */
+    --text-dark: #333;           /* Màu chữ tối */
+    --text-light: #666;          /* Màu chữ phụ */
+    --bg-light: #f8f8f8;         /* Nền sáng */
+    --bg-white: #fff;            /* Màu trắng */
+}
+
+/* === Hero nhỏ === */
+.hero.hero-small {
+    background-size: cover;           /* Ảnh nền phủ kín */
+    background-position: center;      /* Căn giữa ảnh nền */
+    height: 350px;                    /* Chiều cao cố định */
+    display: flex;                    /* Flex để căn giữa */
+    align-items: center;             /* Căn giữa theo chiều dọc */
+    color: white;                    /* Chữ trắng nổi bật */
+    position: relative;
+    z-index: 1;
+    padding: 0 40px;                 /* Padding ngang */
+}
+
+/* === Lớp phủ đen làm nền mờ (overlay) === */
+.hero.hero-small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);  /* Lớp phủ đen 60% */
+    z-index: -1;                     /* Nằm sau nội dung */
+}
+
+/* === Nội dung bên trong hero === */
+.hero.hero-small .hero-content {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* === Tiêu đề chính === */
+.hero.hero-small h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* === Đoạn mô tả dưới tiêu đề === */
+.hero.hero-small p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+/* === Nút bấm trong hero === */
+.hero.hero-small .btn {
+    background-color: var(--primary-gold);    /* Màu vàng */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+/* === Hiệu ứng khi hover nút === */
+.hero.hero-small .btn:hover {
+    background-color: var(--dark-gold);      /* Vàng đậm hơn */
+    transform: translateY(-3px);             /* Nhấc nút lên một chút */
+}
+
+/* CTA Section */
+.section.cta {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
+    color: white;
+    text-align: center;
+}
+.cta-content h2 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+.cta-content p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.cta-content .btn {
+    background-color: var(--primary-gold);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.15em;
+}
+
+.cta-content .btn:hover {
+    background-color: var(--dark-gold);
+    transform: translateY(-3px);
+}
+
+/* Media Queries để đảm bảo responsive */
+@media (max-width: 1200px) {
+    .warranty-content-section::before,
+    .warranty-content-section::after {
+        width: 300px;
+        left: -50px;
+        right: -50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .warranty-content-section::before,
+    .warranty-content-section::after {
+        width: 200px;
+        left: -30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .warranty-content-section::before,
+    .warranty-content-section::after {
+        display: none; /* Ẩn hình nền trên màn hình nhỏ */
+    }
+}

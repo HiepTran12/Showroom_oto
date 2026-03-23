@@ -1,0 +1,274 @@
+/* === Giao diện chung === */
+.main-content {
+    padding: 32px;
+    background-color: #f8f9fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.main-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+/* === Thông báo === */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* === Form tìm kiếm + Thêm === */
+form.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+form.d-flex input.form-control {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+form.d-flex .btn {
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-success {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+}
+
+/* === Bảng khách hàng === */
+.table-responsive {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.table thead {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.table th, .table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e1e5ec;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table th {
+    font-weight: 600;
+    color: #444;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.2s ease;
+}
+
+/* === Hành động: Sửa - Xoá === */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-right: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    form.d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table th, .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn-sm {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+/* === Form thêm/sửa khách hàng === */
+form {
+    background: #fff;
+    padding: 30px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form .mb-3 {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: inline-block;
+    color: #495057;
+}
+
+form .form-control {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s ease;
+}
+
+form .form-control:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+/* === Nút hành động === */
+.btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-success {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #0d6efd;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 600px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* === Nút Excel/PDF === */
+.btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}

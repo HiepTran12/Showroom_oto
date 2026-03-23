@@ -1,0 +1,230 @@
+/* === Layout tổng thể === */
+.main-content {
+    padding: 32px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+/* === Bộ lọc === */
+.filter-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    margin-bottom: 28px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.filter-form label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.filter-form .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.filter-form .form-control:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.filter-form .btn {
+    align-self: end;
+    height: 40px;
+}
+
+/* === Bảng dữ liệu === */
+.table-responsive {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table thead {
+    background-color: #f1f3f5;
+    color: #343a40;
+}
+
+.table th, .table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9fafc;
+}
+
+.table tbody tr:hover {
+    background-color: #eef2f7;
+    transition: 0.2s;
+}
+
+/* === Badge Trạng thái === */
+.badge {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.bg-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.bg-primary {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* === Nút lọc === */
+.btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table th, .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .filter-form {
+        padding: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* === Xuất Excel & In PDF Buttons === */
+.mb-3.d-flex.gap-2 a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Nút Xuất Excel */
+.btn-success {
+    background-color: #198754;
+    border: 1px solid #198754;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+    color: #fff;
+}
+
+/* Nút In PDF */
+.btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .mb-3.d-flex.gap-2 {
+        flex-direction: column;
+    }
+
+    .mb-3.d-flex.gap-2 a.btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

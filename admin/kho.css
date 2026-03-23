@@ -1,0 +1,215 @@
+/* Kho - Giao diện danh sách kho xe */
+.kho-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.kho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.kho-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #223;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.kho-search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.kho-search-form input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+}
+
+.kho-search-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #0045aa;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.kho-search-form .btn-add {
+    background-color: #28a745;
+}
+
+.kho-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kho-table th,
+.kho-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.kho-table th {
+    background-color: #f4f6f9;
+    color: #333;
+    font-weight: 600;
+}
+
+.kho-table tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+.kho-actions .btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #fff;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.kho-actions .btn-warning {
+    background-color: #ffc107;
+}
+
+.kho-actions .btn-danger {
+    background-color: #dc3545;
+}
+
+/* Giao diện form cập nhật kho */
+.update-kho-container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.update-kho-container h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #223;
+}
+
+.update-kho-container label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.update-kho-container input[type="text"],
+.update-kho-container input[type="number"],
+.update-kho-container select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.update-kho-container button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.update-kho-container .btn-primary {
+    background-color: #0045aa;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.update-kho-container .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Giao diện form thêm kho mới */
+.them-kho-form {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.them-kho-form h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #223;
+}
+
+.them-kho-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.them-kho-form input,
+.them-kho-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.them-kho-form button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.them-kho-form .btn-success {
+    background-color: #198754;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.them-kho-form .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
