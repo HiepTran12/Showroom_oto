@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_feedback'])) {
     }
 
     // Sinh mã đơn giản (tránh phụ thuộc bảng sequence)
-    $feedback_no = 'FB'.date('YmdHis');
+    $feedback_no = 'FB'.date('YmdHis'). rand(10,99);
 
     // Chèn phản hồi
     $stmt = $conn->prepare("
@@ -315,7 +315,7 @@ $brands = $conn->query($sql);
     <p>Bạn cần đăng nhập để gửi ý kiến. Bạn có muốn chuyển đến trang đăng nhập không?</p>
     <div class="modal-buttons">
       <!-- Tránh dấu cách trong đường dẫn: đổi thư mục hoặc encode %20 -->
-      <button onclick="window.location.href='Taikhoan%20(1)/dangnhap.php'">Đăng nhập</button>
+      <button onclick="window.location.href='Taikhoan/dangnhap.php'">Đăng nhập</button>
       <button onclick="closeModal()">Hủy</button>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <?php include '../header.php'; ?>
-<link rel="stylesheet" href="/Website_OTO/DVvaHT/hero.css">
+<link rel="stylesheet" href="/showroom_oto/DVvaHT/hero.css">
 <style>
 /* Nội dung mua xe */
 .buying-guide-content-section {
@@ -55,7 +55,7 @@
     <div class="hero-content">
         <h1 align="left">Hướng dẫn mua hàng</h1>
         <p>Quy trình mua xe cao cấp tại Luxury Motors diễn ra nhanh chóng và minh bạch.</p>
-        <a href="/Website_OTO/index.php" class="btn">Về trang chủ</a>
+        <a href="/showroom_oto/index.php" class="btn">Về trang chủ</a>
     </div>
 </section>
 

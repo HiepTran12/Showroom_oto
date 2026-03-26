@@ -337,6 +337,12 @@ $customerGrowth  = ($prevCustomer > 0)
                     CONCAT('Xe mới: ', name, ' đã được thêm') AS message,
                     created_at AS activity_time
               FROM cars
+              UNION ALL
+              SELECT 'feedback' AS type,
+                    CONCAT(c.full_name, ' đã gửi đánh giá') AS message,
+                    cf.created_at AS activity_time
+              FROM customer_feedback cf
+              JOIN customers c ON cf.customer_code = c.customer_code
             ) AS t
             ORDER BY t.activity_time DESC
           LIMIT 5

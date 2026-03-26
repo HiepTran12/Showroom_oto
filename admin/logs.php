@@ -1,6 +1,22 @@
 <?php
+ob_start(); 
 include 'auth_check.php';
 include 'header.php';
+
+// 🔴 XỬ LÝ DELETE TRƯỚC KHI OUTPUT
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_feedback'])) {
+
+    $feedback_no = $_POST['feedback_no'] ?? '';
+
+    if ($feedback_no !== '') {
+        $stmt = $conn->prepare("DELETE FROM customer_feedback WHERE feedback_no = ?");
+        $stmt->bind_param("s", $feedback_no);
+        $stmt->execute();
+    }
+
+    header("Location: ".$_SERVER['REQUEST_URI']);
+    exit();
+}
 
 // helper: escape an toàn cho HTML
 function e($v) {
@@ -50,6 +66,7 @@ $result = $conn->query($sql);
             <th>Đánh giá</th>
             <th>Bình luận</th>
             <th>Ngày tạo</th>
+            <th>Hành động</th>
         </tr>
     </thead>
     <tbody>
@@ -65,10 +82,19 @@ $result = $conn->query($sql);
                         <?= nl2br(e($row['comment'])) ?>
                     </td>
                     <td><?= fmtDate($row['created_at'] ?? null) ?></td>
+                    <td>
+                        <form method="post" onsubmit="return confirm('Bạn có chắc muốn xóa phản hồi này?');">
+                            <input type="hidden" name="delete_feedback" value="1">
+                            <input type="hidden" name="feedback_no" value="<?= e($row['feedback_no']) ?>">
+                            <button type="submit" class="btn-delete">
+                                <i class="fa fa-trash"></i> Xóa
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             <?php endwhile; ?>
         <?php else: ?>
-            <tr><td colspan="7" class="text-center text-muted">Không có dữ liệu phản hồi.</td></tr>
+            <tr><td colspan="8" class="text-center text-muted">Không có dữ liệu phản hồi.</td></tr>
         <?php endif; ?>
     </tbody>
 </table>
@@ -141,7 +167,18 @@ h2 {
     border-left: 4px solid #0d6efd;
     padding-left: 12px;
 }
-
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-delete:hover {
+    background-color: #b02a37;
+}
 
 
 </style>

@@ -1,5 +1,5 @@
 <?php include '../header.php' ?>
-<link rel="stylesheet" href="/Website_OTO/DVvaHT/hero.css">
+<link rel="stylesheet" href="/showroom_oto/DVvaHT/hero.css">
 <style>
 .warranty-content-section {
   padding: 80px 0;

@@ -9,6 +9,9 @@ table.table {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     font-size: 15px;
     margin-bottom: 100px;
+    position: relative;
+    z-index: 999;
+
 }
 
 .table thead {
@@ -66,3 +69,15 @@ h2 {
 }
 
 
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-delete:hover {
+    background-color: #b02a37;
+}
